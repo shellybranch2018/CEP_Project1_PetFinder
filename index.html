@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+       
+            
+  <!--LINKS TO JQUERY/BOOTSTRAP/AJAX-->
+  
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <title>Project Pet Finder!</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="indigo darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+    
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </header>
+  <!-- JUMBOTRON -->
+  
+      
+          
+            <div id="index-banner" class="parallax-container">
+                <div class="section no-pad-bot">
+                  <div class="container">
+                    <br><br>
+                    <h1 class="header center ehite-text text-lighten-2">Project Pet Finder!</h1>
+                    <div class="row center">
+                      <h5 class="header col s12 light">A search app to help people find pets their forever homes.</h5>
+                    </div>
+                    <div class="row center">
+                      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large darken-4">Get Started</a>
+                    </div>
+                    <br><br>
+            
+                  </div>
+                </div>
+                <div class="parallax"><img src="pet.jpg" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 403.421px, 0px); opacity: 1;"></div>
+              </div>
+         
+        <br><br>
+
+      </div>
+      <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>How it works.</h4>
+            <p class="center-align light">Conveniently search for the nearest pet adoption center utilizing Google's state of the art search engine.</p>
+          </div>
+        </div>
+          
+          <div class="container">
+            
+            <hr style='border-color: rgb(243, 242, 223);'>
+            <!--ERROR PANE-->
+            <div id="error-pane" style="text-align: center;"></div>
+            <form id="myForm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="search-bar" placeholder="Search by City">
+                <h2>OR</h2>
+                <input type="text" class="form-control" id="search-zip" placeholder="Search by ZIP">
+              </div>
+            </form>
+             
+       
+            <button class="btn waves-effect waves-light" type="submit" name="action" id="search-btn">Submit
+              <i class="material-icons right">send</i>
+            </button></div>
+        </div>
+    
+      
+            
+        
+   
+
+  <div class="container">
+    <div id="display"></div>
+    <!--RESTAURANTS AND WEATHER DISPLAY-->
+    <div class="row">
+      <div id="weather" class=" col-md-6 " style="text-align: center; border-style: solid; border-width: 1px;">
+
+      </div>
+      <div id="restaurants" class=" col-md-6 " style="text-align: center; border-style: solid; border-width: 1px;"></div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"></script>
+      <script src="js/api.js"></script>
+      <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
