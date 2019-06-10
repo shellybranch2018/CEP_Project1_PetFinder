@@ -6,6 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
+ html {
+  scroll-behavior: smooth;
+
+}
+
+
 nav ul a,
 nav .brand-logo {
   color: #fff;
@@ -54,4 +60,46 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+#back2Top {
+  width: 45px;
+  line-height: 19px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: rgba(32,44,86,0.7);    
+  text-align: center;
+  font-size: 19px;
+  text-decoration: none;
+  padding-top: 13px;
+  border-radius: 7px 7px 0px 0px;
+color: #fff !important;
+  padding-bottom: 10px;
+-moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+#back2Top a { color: #fff !important}
+
+.arrow {
+-moz-transform: rotate(270deg) !important;
+  -webkit-transform: rotate(270deg) !important;
+  -o-transform: rotate(270deg) !important;
+  -ms-transform: rotate(270deg) !important;
+  transform: rotate(270deg) !important;
+font-size: 45px;
+color: #fff !important
+
+}
+
+#back2Top:hover {
+  background-color: rgba(32,44,86,0.3);
+  color: #fff;
 }

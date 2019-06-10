@@ -26,13 +26,15 @@
         <div class="nav-wrapper container">
           <a id="logo-container" href="#" class="brand-logo">Pet Finder</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#howitworks">How It Works</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
           </ul>
     
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#howitworks">How It Works</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -42,7 +44,7 @@
   
       
           
-            <div id="index-banner" class="parallax-container">
+            <div id="index-banner" class="parallax-container main">
                 <div class="section no-pad-bot">
                   <div class="container">
                     <br><br>
@@ -51,7 +53,7 @@
                       <h5 class="header col s12 light">A search app to help people find pets their forever homes.</h5>
                     </div>
                     <div class="row center">
-                      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large darken-4">Get Started</a>
+                      <a href="#startsearch" id="download-button" class="btn-large darken-4">Get Started</a>
                     </div>
                     <br><br>
             
@@ -65,9 +67,9 @@
       </div>
       <div class="container">
       <div class="row">
-          <div class="col s12 center">
+          <div class="col s12 center" data-index="2">
             <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4>About Us</h4>
+            <h4 id="about">About Us</h4>
             <p class="center-align light"> 
              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Nisl pretium fusce id velit ut tortor pretium. Mattis pellentesque id nibh tortor id aliquet lectus. Integer feugiat scelerisque varius morbi enim nunc. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Risus feugiat in ante metus dictum at tempor commodo. Pulvinar etiam non quam lacus. Sagittis eu volutpat odio facilisis mauris sit amet. Non odio euismod lacinia at quis risus. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Suspendisse potenti nullam ac tortor vitae purus.
            </p>
@@ -82,14 +84,14 @@
         <div class="row">
           <div class="col s12 center">
             <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4>How it Works</h4>
+            <h4 id="howitworks">How it Works</h4>
             <p class="center-align light">Conveniently search for the nearest pet adoption center utilizing Google's state of the art search engine.</p>
           </div>
         </div>
         <div class="row">
             <div class="col s12 center">
               <h3><i class="mdi-content-send brown-text"></i></h3>
-              <h4>Contact Us</h4>
+              <h4 id="contactus">Contact Us</h4>
               <p class="center-align light">
                   Ligula ullamcorper malesuada proin libero nunc consequat. Volutpat blandit aliquam etiam erat velit scelerisque in. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Massa placerat duis ultricies lacus sed turpis tincidunt. At risus viverra adipiscing at in. Nulla facilisi nullam vehicula ipsum a arcu cursus. Non sodales neque sodales ut etiam sit amet. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Lacinia at quis risus sed vulputate odio ut. Lectus sit amet est placerat in egestas erat imperdiet sed. Tellus id interdum velit laoreet id donec ultrices. Libero enim sed faucibus turpis in eu mi bibendum. Nisi lacus sed viverra tellus in hac habitasse platea. Enim nec dui nunc mattis enim ut tellus. Consectetur libero id faucibus nisl tincidunt eget nullam non. A diam sollicitudin tempor id eu. Quisque non tellus orci ac. At auctor urna nunc id cursus metus aliquam.
                </p>
@@ -98,7 +100,7 @@
             <hr style='border-color: rgb(243, 242, 223);'>
             <div class="col s12 center">
                 <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>Start Your Search</h4>
+                <h4 id="startsearch">Start Your Search</h4>
                 
               </div>
             <!--ERROR PANE-->
@@ -119,14 +121,15 @@
 
   <div class="container">
     <div id="display"></div>
-    <!--RESTAURANTS AND WEATHER DISPLAY-->
+    
     <div class="row">
       <div id="weather" class=" col-md-6 " style="text-align: center; border-style: solid; border-width: 1px;">
 
       </div>
-      <div id="restaurants" class=" col-md-6 " style="text-align: center; border-style: solid; border-width: 1px;"></div>
+      <div id="petLocations" class=" col-md-6 " style="text-align: center; border-style: solid; border-width: 1px;"></div>
+    
     </div>
-
+    <a id="back2Top" title="Back to top" href="#"><span class="arrow">&#10148;</span></a>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
@@ -136,6 +139,28 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+ /*Scroll to top when arrow up clicked END*/
+
+
+</script>
+  
 </body>
 
 </html>

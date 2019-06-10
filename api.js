@@ -116,7 +116,7 @@ $(function () {
         lat = response.results[0].geometry.location.lat;
         lng = response.results[0].geometry.location.lng;
         // SEARCH BASED ON LOCATION, RADIUS, TYPE, KEYWORD
-        var location = "location=" + lat + ", " + lng + "&radius=17000&rankby=prominence&type=pet&keyword=petadoption";
+        var location = "location=" + lat + ", " + lng + "&radius=100000&rankby=prominence&type=pet&keyword=petadoption";
         // QUERY URL FORMULA
         var queryURL2 = "https://cors-everywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?" + location + APIKEY;
         $.ajax({
@@ -126,12 +126,12 @@ $(function () {
           .then(function (pets) {
             $("#petLocations").empty().append("<h2>Adoption locations within 10 miles</h2>" + "<hr style='border-color: rgb(243, 242, 223);'>");
             for (i = 0; i < pets.results.length; i++) {
-              var patioResults = pets.results[i].name;
-              var patioAddress = pets.results[i].vicinity;
-              var patioRating = pets.results[i].rating;
-              $("#petLocations").append("<p style='text-align: center;'>" + patioResults + " - " + patioRating + "/5" + "</p>");
+              var petResults = pets.results[i].name;
+              var petAddress = pets.results[i].vicinity;
+              var petRating = pets.results[i].rating;
+              $("#petLocations").append("<p style='text-align: center;'>" + petResults + " - " + petRating + "/5" + "</p>");
               $("#petLocations").append("<p style='text-align: center; line-height: 0.1em;'>" + "\xB0" + "</p>")
-              $("#petLocations").append("<p style='text-align: center;'>" + patioAddress + "</p>");
+              $("#petLocations").append("<p style='text-align: center;'>" + petAddress + "</p>");
               $("#petLocations").append("<hr style='border-color: rgb(243, 242, 223);'>");
             }
           })
@@ -154,7 +154,7 @@ $(function () {
         var APIKEY2 = "&key=AIzaSyBU8WngwG699p-gzKCP_VezmXkXqZ64ovc";
         var lat = response.lat;
         var lng = response.lng;
-        var location = "location=" + lat + ", " + lng + "&radius=17000&rankby=prominence&type=pet&keyword=petadoption";
+        var location = "location=" + lat + ", " + lng + "&radius=100000&rankby=prominence&type=pet&keyword=petadoption";
         var queryURL2 = "https://cors-everywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?" + location + APIKEY2;
         $.ajax({
             url: queryURL2,
@@ -184,12 +184,12 @@ $(function () {
     $("#display").empty("");
     if (checkBlank === "") {
 
-      restaurantsZIP();
+      petsZIP();
       $("#petLocations").empty();
       $("#weather").empty();
     } else {
       weather();
-      restaurants();
+      pets();
       $("#petLocations").empty();
       $("#weather").empty();
     }
@@ -202,7 +202,7 @@ $(function () {
     var checkBlank = $("#search-bar").val().trim();
     $("#display").empty("");
     if (checkBlank === "") {
-      
+      petsZIP();
       weatherZIP();
 
       $("#petLocations").empty();
