@@ -140,9 +140,7 @@ $(function () {
   // ZIP CODE AJAX CALL, THEN GOOGLE PLACES SEARCH CALL
   function petsZIP() {
     var zipCode = $("#search-zip").val().trim();
-    $("#display").append("<h2 style='text-align: center;'>" +
-      "You Searched: " + zipCode +
-      "</h2>");
+    $("#display").append("<h2 style='text-align: center;'>" + "You Searched: " + zipCode + "</h2>");
     // ZIP CODE API
     var APIKEY = "3BHfNoGVJZtKdX7h9rLzIr9OfCcEnusmDgQYoWIeUKJqnvKjAbYHrcsHtg7n5APZ";
     var queryURL = "https://cors-everywhere.herokuapp.com/https://www.zipcodeapi.com/rest/" + APIKEY + "/info.json/" + zipCode + "/degrees";
