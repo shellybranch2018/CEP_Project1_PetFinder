@@ -26,11 +26,11 @@ $(function () {
         // POST WEATHER TO HTML
         var cityBox = `
         <div>
-          <h2>Weather Conditions</h2>
-          <h3> In case you want to take your new pet to a park!               </h3>
+          <h2 id="weatherConditions">Weather Conditions</h2>
+          <h3> In case you want to take your new pet to a park!</h3>
           <hr style='border-color: rgb(243, 242, 223);'/>
           <p style='text-align: center;'>Temp: ${temperature} \xB0F</p>
-          <p style='text-align: center;'>Precipitation: ${condition} </p>
+          <p style='text-align: center;'>Precipitation: ${condition}</p>
           <p style='text-align: center;'>Wind Speed:${wind} mph</p>
           <hr style='border-color: rgb(243, 242, 223);'/>
           <div id='places-map'>
@@ -101,7 +101,7 @@ $(function () {
   // MAPS AJAX CALLS BY CITY, THEN PLACES SEARCH CALL
   function pets() {
     var citySearch = $("#search-bar").val().trim();
-    $("#display").append("<h2 style='text-align: center;'>" +
+    $("#display").append("<h2 id='cityName' style='text-align: center;'>" +
       "You Searched: " + citySearch +
       "</h2>");
     var APIKEY = "&key=AIzaSyBU8WngwG699p-gzKCP_VezmXkXqZ64ovc";
@@ -129,7 +129,7 @@ $(function () {
               var petResults = pets.results[i].name;
               var petAddress = pets.results[i].vicinity;
               var petRating = pets.results[i].rating;
-              $("#petLocations").append("<p style='text-align: center;'>" + petResults + " - " + petRating + "/5" + "</p>");
+              $("#petLocations").append("<p id='petText' style='text-align: center;'>" + petResults + " - " + petRating + "/5" + "</p>");
               $("#petLocations").append("<p style='text-align: center; line-height: 0.1em;'>" + "\xB0" + "</p>")
               $("#petLocations").append("<p style='text-align: center;'>" + petAddress + "</p>");
               $("#petLocations").append("<hr style='border-color: rgb(243, 242, 223);'>");
@@ -160,12 +160,12 @@ $(function () {
             url: queryURL2,
             method: "GET"
           })
-          .then(function (rest) {
+          .then(function (pets) {
             $("#petLocations").empty().append("<h2>Pet Adoption within 10 miles</h2>" + "<hr style='border-color: rgb(243, 242, 223);'>");
-            for (i = 0; i < rest.results.length; i++) {
-              var petResults = rest.results[i].name;
-              var petAddress = rest.results[i].vicinity;
-              var petRating = rest.results[i].rating;
+            for (i = 0; i < pets.results.length; i++) {
+              var petResults = pets.results[i].name;
+              var petAddress = pets.results[i].vicinity;
+              var petRating = pets.results[i].rating;
               $("#petLocations").append("<p style='text-align: center;'>" + petResults + " - " + petRating + "/5" + "</p>");
               $("#petLocations").append("<p style='text-align: center; line-height: 0.1em;'>" + "\xB0" + "</p>")
               $("#petLocations").append("<p style='text-align: center;'>" + petAddress + "</p>");

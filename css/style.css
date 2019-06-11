@@ -17,6 +17,30 @@
   background-size: 120%;
   color: rgb(243, 242, 223);
   font-weight: 900;
+  font-family: 'Courgette', cursive;
+  font-size: 25px;
+
+}
+
+#about, #howitworks, #contactus, #startsearch {
+  text-decoration-line: underline;
+}
+
+#aboutText, #contactText, #howItWorksText {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#petLocations, #weather, #weatherConditions {
+  background-image: url("https://cdn.hipwallpaper.com/i/11/35/1oi7h9.jpg");
+  font-family: 'Courgette', cursive;
+  color: papayawhip;
+
+}
+
+
+#searchText {
+  background-color: papayawhip;
 }
 
 
