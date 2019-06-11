@@ -11,6 +11,14 @@
 
 }
 
+#wrapper {
+  background-image: url("https://cdn.hipwallpaper.com/i/11/35/1oi7h9.jpg");
+  background-repeat: inherit;
+  background-size: 120%;
+  color: rgb(243, 242, 223);
+  font-weight: 900;
+}
+
 
 nav ul a,
 nav .brand-logo {
