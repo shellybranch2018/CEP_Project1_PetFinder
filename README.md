@@ -2,7 +2,11 @@
 
 Thanks for checking out our Project!
 
-This is our Pet Finder App. The goal is to help aid in pet adoption. 
+Contributors: Dylan Rutter, Shelly Branch
+
+This is our Pet Finder App. The goal is to help aid in pet adoption. A topic I've always been very passionate about. Once I had drafted up a rough draft of api functionality on codepen,https://codepen.io/dylan-rutter/pen/byyzZm, Shelly was able to get a grid up with some scrolling and mobile functionality. 
+
+Future goals would be adding user log in functionality to start off by saving a list of places you want to visit later on. 
 
 The App uses 5 API's
 1. Google Maps
